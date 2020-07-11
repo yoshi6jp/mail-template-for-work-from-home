@@ -1,11 +1,11 @@
-import React, { useEffect, useContext, useState, useCallback } from '/web_modules/react.js';
-import { Input, Button, InputGroup, InputGroupAddon, Form, FormGroup } from '/web_modules/reactstrap.js';
-import { format } from '/web_modules/date-fns.js';
-import { FontAwesomeIcon } from '/web_modules/@fortawesome/react-fontawesome.js';
-import { faMinus, faPenNib } from '/web_modules/@fortawesome/free-solid-svg-icons.js';
+import React, { useEffect, useContext, useState, useCallback } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { Input, Button, InputGroup, InputGroupAddon, Form, FormGroup } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
+import { format } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/date-fns.js';
+import { FontAwesomeIcon } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/react-fontawesome.js';
+import { faMinus, faPenNib } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/free-solid-svg-icons.js';
 import { RootContext } from '../Provider.js';
 import { LS_KEYS } from '../utils.js';
-import { ja } from '/web_modules/date-fns/locale.js';
+import { ja } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/date-fns/locale.js';
 const SavedStartTime = localStorage.getItem(LS_KEYS.start_time) || '08:40';
 const SavedEndTime = localStorage.getItem(LS_KEYS.end_time) || '17:30';
 const SavedTimeLabel = localStorage.getItem(LS_KEYS.time_label) || '[時間]';

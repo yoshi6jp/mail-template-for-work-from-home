@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect } from '/web_modules/react.js';
-import { Input } from '/web_modules/reactstrap.js';
+import React, { useCallback, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { Input } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { LS_KEYS } from '../utils.js';
 const SavedText = localStorage.getItem(LS_KEYS.footer) || `以上です。`;
 export const MailFooterEditor = ({

@@ -1,5 +1,5 @@
-import React, { useCallback, useContext, useState, useEffect } from '/web_modules/react.js';
-import { InputGroup, InputGroupAddon, InputGroupText, Input } from '/web_modules/reactstrap.js';
+import React, { useCallback, useContext, useState, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { RootContext } from '../Provider.js';
 import { LS_KEYS } from '../utils.js';
 const SavedStartValue = localStorage.getItem(LS_KEYS.start_subject) || '[テレワーク]業務開始';

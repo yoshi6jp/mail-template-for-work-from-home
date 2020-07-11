@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from '/web_modules/react.js';
+import React, { createContext, useReducer } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
 const initialState = {
   to: '',
   subject: '',

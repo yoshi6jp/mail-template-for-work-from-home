@@ -1,8 +1,8 @@
-import React, { useCallback, useState, useEffect } from '/web_modules/react.js';
-import { Input, Form, Button } from '/web_modules/reactstrap.js';
+import React, { useCallback, useState, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { Input, Form, Button } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { LS_KEYS } from '../utils.js';
-import { FontAwesomeIcon } from '/web_modules/@fortawesome/react-fontawesome.js';
-import { faTimesCircle } from '/web_modules/@fortawesome/free-solid-svg-icons.js';
+import { FontAwesomeIcon } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/react-fontawesome.js';
+import { faTimesCircle } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/free-solid-svg-icons.js';
 import st from './MailContentEditor.module.css.proxy.js';
 const ContentSample = `例
 - AAAの作業

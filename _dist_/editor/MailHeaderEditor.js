@@ -1,6 +1,6 @@
-import React, { useCallback, useContext, useState, useEffect } from '/web_modules/react.js';
+import React, { useCallback, useContext, useState, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
 import { LS_KEYS } from '../utils.js';
-import { Input } from '/web_modules/reactstrap.js';
+import { Input } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { RootContext } from '../Provider.js';
 const SavedStartHeader = localStorage.getItem(LS_KEYS.start_header) || `xxさん
 

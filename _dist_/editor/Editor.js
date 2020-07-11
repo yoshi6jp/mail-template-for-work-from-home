@@ -1,4 +1,4 @@
-import React from '/web_modules/react.js';
+import React from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
 import { ToEditor } from './ToEditor.js';
 import { TypeSelector } from './TypeSelector.js';
 import { SubjectEditor } from './SubjectEditor.js';

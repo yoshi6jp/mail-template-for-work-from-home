@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from '/web_modules/react.js';
+import React, { useState, useContext, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
 import { MailHeaderEditor } from './MailHeaderEditor.js';
 import { TimeEditor } from './TimeEditor.js';
 import { MailContentEditor } from './MailContentEditor.js';

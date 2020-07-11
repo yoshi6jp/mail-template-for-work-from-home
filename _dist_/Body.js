@@ -1,5 +1,5 @@
-import React from '/web_modules/react.js';
-import { Container, Col, Row } from '/web_modules/reactstrap.js';
+import React from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { Container, Col, Row } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { Editor } from './editor/Editor.js';
 import { Preview } from './preview/Preview.js';
 import st from './Body.module.css.proxy.js';

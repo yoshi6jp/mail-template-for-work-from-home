@@ -1,5 +1,5 @@
-import React, { useCallback, useContext } from '/web_modules/react.js';
-import { InputGroup, InputGroupAddon, InputGroupText, FormGroup, Label, Input } from '/web_modules/reactstrap.js';
+import React, { useCallback, useContext } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { InputGroup, InputGroupAddon, InputGroupText, FormGroup, Label, Input } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { RootContext } from '../Provider.js';
 export const TypeSelector = () => {
   const {

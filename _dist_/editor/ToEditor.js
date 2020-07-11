@@ -1,5 +1,5 @@
-import React, { useCallback, useContext, useEffect } from '/web_modules/react.js';
-import { InputGroupAddon, InputGroupText, InputGroup, Input } from '/web_modules/reactstrap.js';
+import React, { useCallback, useContext, useEffect } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { InputGroupAddon, InputGroupText, InputGroup, Input } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
 import { RootContext } from '../Provider.js';
 import { LS_KEYS } from '../utils.js';
 const SavedValue = localStorage.getItem(LS_KEYS.to) || '';

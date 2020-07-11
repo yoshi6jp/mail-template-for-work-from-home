@@ -1,7 +1,7 @@
-import React, { useContext } from '/web_modules/react.js';
-import { Navbar, NavbarBrand, Button } from '/web_modules/reactstrap.js';
-import { FontAwesomeIcon } from '/web_modules/@fortawesome/react-fontawesome.js';
-import { faEnvelope } from '/web_modules/@fortawesome/free-solid-svg-icons.js';
+import React, { useContext } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/react.js';
+import { Navbar, NavbarBrand, Button } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/reactstrap.js';
+import { FontAwesomeIcon } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/react-fontawesome.js';
+import { faEnvelope } from 'https://yoshi6jp.github.io/mail-template-for-work-from-home/web_modules/@fortawesome/free-solid-svg-icons.js';
 import { RootContext } from './Provider.js';
 export const Header = () => {
   const {

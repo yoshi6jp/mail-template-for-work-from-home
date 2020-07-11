@@ -1,7 +1,7 @@
-import React, { useCallback, useContext, useState, useEffect } from 'react';
-import { LS_KEYS } from '../utils';
-import { Input } from 'reactstrap';
-import { RootContext } from '../Provider';
+import React, { useCallback, useContext, useState, useEffect } from "react";
+import { LS_KEYS } from "../utils";
+import Textarea from "react-textarea-autosize";
+import { RootContext } from "../Provider";
 const SavedStartHeader =
   localStorage.getItem(LS_KEYS.start_header) ||
   `xxさん
@@ -22,11 +22,11 @@ export const MailHeaderEditor: React.FC<{
   const [endHeader, setEndHeader] = useState(SavedEndHeader);
   useEffect(() => {
     switch (type) {
-      case 'Start': {
+      case "Start": {
         onChange(startHeader);
         break;
       }
-      case 'End': {
+      case "End": {
         onChange(endHeader);
         break;
       }
@@ -39,37 +39,35 @@ export const MailHeaderEditor: React.FC<{
     localStorage.setItem(LS_KEYS.end_header, endHeader);
   }, [endHeader]);
   const handleStartChange = useCallback(
-    (evt: React.ChangeEvent<HTMLInputElement>) => {
+    (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
       setStartHeader(evt.target.value);
     },
-    [setStartHeader],
+    [setStartHeader]
   );
 
   const handleEndChange = useCallback(
-    (evt: React.ChangeEvent<HTMLInputElement>) => {
+    (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
       setEndHeader(evt.target.value);
     },
-    [setEndHeader],
+    [setEndHeader]
   );
   return (
     <>
-      <Input
-        className="h-md"
-        hidden={type !== 'Start'}
-        key="start"
-        type="textarea"
+      <Textarea
+        className="form-control"
+        hidden={type !== "Start"}
         defaultValue={startHeader}
         onChange={handleStartChange}
         placeholder="開始用の本文のヘッダー"
+        minRows={3}
       />
-      <Input
-        className="h-md"
-        hidden={type !== 'End'}
-        key="end"
-        type="textarea"
+      <Textarea
+        className="form-control"
+        hidden={type !== "End"}
         defaultValue={endHeader}
         onChange={handleEndChange}
         placeholder="終了用の本文のヘッダー"
+        minRows={3}
       />
     </>
   );

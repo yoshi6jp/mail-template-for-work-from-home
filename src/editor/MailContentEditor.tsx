@@ -3,6 +3,7 @@ import { Input, Form, Button } from "reactstrap";
 import { LS_KEYS } from "../utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import Textarea from "react-textarea-autosize";
 import st from "./MailContentEditor.module.css";
 const ContentSample = `例
 - AAAの作業
@@ -19,14 +20,18 @@ export const MailContentEditor: React.FC<{
   const [contentText, setContentText] = useState(SavedContentText);
   const handleLabelChange = useCallback(
     (evt: React.ChangeEvent<HTMLInputElement>) => {
-      setContentLabel(evt.target.value);
+      const value = evt.target.value || "";
+      setContentLabel(value);
+      localStorage.setItem(LS_KEYS.content_label, value);
     },
     [setContentLabel]
   );
 
   const handleTextChange = useCallback(
-    (evt: React.ChangeEvent<HTMLInputElement>) => {
-      setContentText(evt.target.value);
+    (evt: React.ChangeEvent<HTMLTextAreaElement>) => {
+      const value = evt.target.value || "";
+      setContentText(value);
+      localStorage.setItem(LS_KEYS.content_text, value);
     },
     [setContentText]
   );
@@ -44,12 +49,12 @@ ${contentText}`);
         <Input onChange={handleLabelChange} value={contentLabel} />
       </Form>
       <div className="position-relative">
-        <Input
-          onChange={handleTextChange}
-          className="h-md"
-          type="textarea"
-          placeholder={ContentSample}
+        <Textarea
           value={contentText}
+          minRows={5}
+          className="form-control"
+          placeholder={ContentSample}
+          onChange={handleTextChange}
         />
         <Button
           onClick={handleClearText}

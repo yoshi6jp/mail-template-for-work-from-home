@@ -1,11 +1,11 @@
-import React from 'react';
-import { Container, Col, Row } from 'reactstrap';
-import { Editor } from './editor/Editor';
-import { Preview } from './preview/Preview';
-import st from './Body.module.css';
+import React from "react";
+import { Container, Col, Row } from "reactstrap";
+import { Editor } from "./editor/Editor";
+import { Preview } from "./preview/Preview";
+import st from "./Body.module.css";
 export const Body: React.FC = () => {
   return (
-    <Container className={st.top}>
+    <Container className={st.top} fluid={true}>
       <Row>
         <Col md="12" lg="6">
           <Editor />

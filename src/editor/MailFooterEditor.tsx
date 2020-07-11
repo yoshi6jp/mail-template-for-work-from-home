@@ -1,7 +1,13 @@
 import React, { useCallback, useEffect } from "react";
 import { Input } from "reactstrap";
 import { LS_KEYS } from "../utils";
-const SavedText = localStorage.getItem(LS_KEYS.footer) || `以上です。`;
+const SavedText =
+  localStorage.getItem(LS_KEYS.footer) ||
+  `以上です。
+
+------
+このメールは、以下のツールを利用して作成しました。
+- [テレワーク用のメールテンプレート](https://yoshi6jp.github.io/mail-template-for-work-from-home/)`;
 export const MailFooterEditor: React.FC<{
   onChange: (val: string) => void;
 }> = ({ onChange }) => {

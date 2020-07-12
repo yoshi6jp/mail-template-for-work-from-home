@@ -12,6 +12,7 @@ export const Header: React.FC = () => {
     <Navbar dark={true} color="dark" fixed="top">
       <NavbarBrand>テレワーク用のメールテンプレート</NavbarBrand>
       <Button
+        className="d-none d-sm-inline-block"
         title="[Experiment] Outlook on the webでメールを作成"
         tag="a"
         target="_blank"

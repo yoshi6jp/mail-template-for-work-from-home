@@ -1,25 +1,38 @@
 import React, { useState, useContext, useEffect } from "react";
+import yaml from "js-yaml";
 import { MailHeaderEditor } from "./MailHeaderEditor";
+import { JsonForm } from "../json_form/JsonForm";
 import { TimeEditor } from "./TimeEditor";
 import { MailContentEditor } from "./MailContentEditor";
 import { MailFooterEditor } from "./MailFooterEditor";
 import { RootContext } from "../Provider";
 export const BodyEditor: React.FC = () => {
-  const { dispatch } = useContext(RootContext);
+  const { dispatch, schema, formData } = useContext(RootContext);
   const [header, setHeader] = useState("");
   const [timeText, setTimeText] = useState("");
   const [content, setContent] = useState("");
   const [footer, setFooter] = useState("");
   useEffect(() => {
-    const body = `${header}
+    let body = "";
+    if (schema) {
+      body = `${header}
+
+${timeText}    
+
+${yaml.safeDump(formData || "")}
+
+${footer}`;
+    } else {
+      body = `${header}
 
 ${timeText}    
 
 ${content}
 
 ${footer}`;
+    }
     dispatch({ type: "SetBody", payload: body });
-  }, [header, timeText, content, footer, dispatch]);
+  }, [header, timeText, content, footer, schema, formData, dispatch]);
 
   return (
     <div>
@@ -28,7 +41,7 @@ ${footer}`;
         <MailHeaderEditor onChange={setHeader} />
         <TimeEditor onChange={setTimeText} />
       </div>
-      <MailContentEditor onChange={setContent} />
+      {schema ? <JsonForm /> : <MailContentEditor onChange={setContent} />}
       <div className="d-none d-sm-block">
         <MailFooterEditor onChange={setFooter} />
       </div>

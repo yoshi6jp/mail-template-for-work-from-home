@@ -1,0 +1,51 @@
+{
+  "ENDPOINT": "http://localhost:3030/post",
+  "FORM":{
+    "title": "form title",
+    "description": "form description",
+    "type":"object",
+    "properties": {
+      "uid": {
+        "type":"number",
+        "title": "User ID"
+      },
+      "tasks": {
+        "type":"array",
+        "title": "Tasks",
+        "items": {
+          "type":"object",
+          "properties": {
+            "storyId": {
+              "type": "number",
+              "title": "Story ID"
+            },
+            "progress": {
+              "type": "number",
+              "title": "progress"
+            },
+            "detail": {
+              "type": "string",
+              "title": "Detail"
+            }
+          }
+        }
+      },
+      "memo": {
+        "type": "string",
+        "title": "memo"
+      }
+    }
+  },
+  "UI":{
+    "tasks":{
+      "items": {
+        "progress": {
+          "ui:widget": "range"
+        }
+      }
+    },
+    "memo": {
+      "ui:widget": "textarea"
+    }
+  }
+}

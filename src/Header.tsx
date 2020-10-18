@@ -3,18 +3,21 @@ import { Navbar, NavbarBrand, Button } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { RootContext } from "./Provider";
+import { LS_KEYS } from "./utils";
 export const Header: React.FC = () => {
   const { to, subject, body, formData, sendUrl } = useContext(RootContext);
   const href = `https://outlook.office.com/owa/?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}&to=${to}&path=/mail/action/compose`;
   const handleClick = useCallback(async () => {
+    const body = JSON.stringify(formData);
+    localStorage.setItem(LS_KEYS.schema_json_data, body);
     await fetch(sendUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body,
     });
   }, [formData, sendUrl]);
   return (

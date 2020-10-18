@@ -47,13 +47,16 @@ interface FormDataAction {
   type: "SetFormData";
   payload: State["formData"];
 }
-
+interface ClearJsonSchemaAction {
+  type: "ClearJsonSchema";
+}
 type Actions =
   | Action
   | TypeAction
   | SchemaAction
   | UiSchemaAction
-  | FormDataAction;
+  | FormDataAction
+  | ClearJsonSchemaAction;
 const reducer = (state: State, action: Actions) => {
   switch (action.type) {
     case "SetTo": {
@@ -82,6 +85,16 @@ const reducer = (state: State, action: Actions) => {
     }
     case "SetSendUrl": {
       return { ...state, sendUrl: action.payload };
+    }
+    case "ClearJsonSchema": {
+      return {
+        ...state,
+        schema: null,
+        uiSchema: null,
+        formData: null,
+        configUrl: "",
+        sendUrl: "",
+      };
     }
     default:
       return state;

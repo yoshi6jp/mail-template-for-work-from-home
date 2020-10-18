@@ -1,4 +1,4 @@
-const LS_KEY_PREFIX = 'mail-template-for-work-from-home-';
+const LS_KEY_PREFIX = "mail-template-for-work-from-home-";
 export const LS_KEYS = {
   to: `${LS_KEY_PREFIX}to`,
   start_subject: `${LS_KEY_PREFIX}start_subject`,
@@ -11,4 +11,6 @@ export const LS_KEYS = {
   footer: `${LS_KEY_PREFIX}footer`,
   start_time: `${LS_KEY_PREFIX}start_time`,
   end_time: `${LS_KEY_PREFIX}end_time`,
+  config_url: `${LS_KEY_PREFIX}config_url`,
+  schema_json_data: `${LS_KEY_PREFIX}schema_json_data`,
 };

@@ -26,7 +26,11 @@
             "detail": {
               "type": "string",
               "title": "Detail"
+            },
+            "updateAt" :{
+              "type":"string"
             }
+
           }
         }
       },
@@ -41,6 +45,13 @@
       "items": {
         "progress": {
           "ui:widget": "range"
+        },
+        "updateAt": {
+          "ui:widget": "alt-date",
+          "ui:options": {
+            "yearRange": [2020,2030],
+            "hideClearButton": true
+          }
         }
       }
     },

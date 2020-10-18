@@ -6,6 +6,8 @@ import { TimeEditor } from "./TimeEditor";
 import { MailContentEditor } from "./MailContentEditor";
 import { MailFooterEditor } from "./MailFooterEditor";
 import { RootContext } from "../Provider";
+const yamlStart = "```yaml";
+const yamlEnd = "```";
 export const BodyEditor: React.FC = () => {
   const { dispatch, schema, formData } = useContext(RootContext);
   const [header, setHeader] = useState("");
@@ -15,11 +17,19 @@ export const BodyEditor: React.FC = () => {
   useEffect(() => {
     let body = "";
     if (schema) {
+      let formText = "";
+      try {
+        formText = yaml.safeDump(formData || "");
+      } catch (e) {
+        console.log(e);
+      }
       body = `${header}
 
-${timeText}    
+${timeText}
 
-${yaml.safeDump(formData || "")}
+${yamlStart}
+${formText}
+${yamlEnd}
 
 ${footer}`;
     } else {

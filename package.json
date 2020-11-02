@@ -31,7 +31,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-textarea-autosize": "^8.2.0",
-    "reactstrap": "^8.5.1",
+    "reactstrap": "^8.7.0",
     "typescript": "~3.7.2"
   },
   "scripts": {

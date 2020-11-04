@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row } from "reactstrap";
+import { Container, Col, Row, Card, CardHeader } from "reactstrap";
 import { Editor } from "./editor/Editor";
 import { Preview } from "./preview/Preview";
 import { JsonFormConfig } from "./json_form/JsonFormConfig";
@@ -15,9 +15,15 @@ export const Body: React.FC = () => {
           </Col>
         )}
         <Col md="12" lg="6">
+          <Card>
+            <CardHeader>編集</CardHeader>
+          </Card>
           <Editor />
         </Col>
         <Col md="12" lg="6" className="d-none d-sm-block">
+          <Card>
+            <CardHeader>プレビュー</CardHeader>
+          </Card>
           <Preview />
         </Col>
       </Row>

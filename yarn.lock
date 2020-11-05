@@ -1006,21 +1006,14 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@7.9.0", "@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@7.9.0":
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.0.tgz#337eda67401f5b066a6f205a3113d4ac18ba495b"
   integrity sha512-cTIudHnzuWLS56ik4DnRnqqNf8MkdUzV4iFFI1h7Jo9xvrpQROYaAnaSd2mHLQAzzZAPfATynX5ord6YlNYNMA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.5.1":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.4.tgz#a6724f1a6b8d2f6ea5236dbfe58c7d7ea9c5eb99"
-  integrity sha512-UpTN5yUJr9b4EX2CnGNWIvER7Ab83ibv0pcvvHc4UOdrBI5jb8bj+32cCwPX6xu0mt2daFNjYhoi+X7beH0RSw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -9136,10 +9129,10 @@ react@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
-reactstrap@^8.5.1:
-  version "8.5.1"
-  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-8.5.1.tgz#dde43539602117888a138042b53703b7621c4318"
-  integrity sha512-igpdw8DiW48ZtwGOo2unwlsILFlF7deiqFUAqc3wrsX/0H0OkvmezJdkjJx2X9jaHfjGdPpm0vu5VN/kk7tv+A==
+reactstrap@^8.7.1:
+  version "8.7.1"
+  resolved "https://registry.yarnpkg.com/reactstrap/-/reactstrap-8.7.1.tgz#9631db8460a83a4d40fbee61abdd577b4f1a7069"
+  integrity sha512-nZEUSxqqWJh0yGIvp4BgoHkXAcm2PqRLhpoOodMp5ce6njVpPd+GgUtbZscpu4jOi7GUFwpJ15tWZn59co4EQg==
   dependencies:
     "@babel/runtime" "^7.2.0"
     classnames "^2.2.3"
